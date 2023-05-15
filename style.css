@@ -1,0 +1,56 @@
+body {
+    background-color: lightcoral;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+}
+
+.left-frame, .right-frame {
+    padding: 20px;
+}
+
+#staff-display {
+    width: 100%;
+    font-size: 12px;
+    text-align: center;
+    height: 200px;
+}
+
+#name-entry {
+    width: 100%;
+    font-size: 12px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+button {
+    width: 32%;
+    height: 40px;
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+
+#rotation-display {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+#next-button {
+    width: 100%;
+    height: 40px;
+    font-size: 12px;
+}
