@@ -71,7 +71,7 @@ button {
     border: 0;
     border-radius: 5px;
     cursor: pointer;
-    transition: background 0.3s ease;
+    transition: background 0.5s ease;
 }
 
 button:hover {
@@ -82,6 +82,7 @@ button:hover {
 #rotation-display {
     font-size: 24px;
     font-weight: bold;
+    font-size: 40px;
     margin-bottom: 20px;
     height: 200px;
     display: flex;
@@ -92,7 +93,8 @@ button:hover {
     border-radius: 5px;
     padding: 20px;
     text-align: center;
-    backdrop-filter: blur(5px); /* blur effect */
+    background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(5px);
 }
 
 #next-button {
@@ -101,6 +103,8 @@ button:hover {
     font-size: 12px;
     background: #7ef2ae;
     backdrop-filter: blur(5px);
+    cursor: pointer;
+    transition: background 1s ease;
 }
 
 #next-button:hover {
