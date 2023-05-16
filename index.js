@@ -67,6 +67,19 @@ function moveUp() {
 }
 
 function moveDown() {
+	const selectedName = staffDisplay.selectedIndex;
+  if(selectedName >= 0 && selectedName < staffList.length - 1) {
+  	const temp = staffList[selectedName];
+    staffList[selectedName] = staffList[selectedName + 1];
+    staffList[selectedName + 1] = temp;
+    
+    staffDisplay.options[selectedName].text = staffList[selectedName];
+    staffDisplay.options[selectedName + 1].text = staffList[selectedName + 1];
+    staffDisplay.selectedIndex = selectedName + 1;
+    
+    updateRotationDisplay();
+  }
+	
 
 }
 
@@ -85,4 +98,3 @@ function updateRotationDisplay(){
         rotationDisplay.innerHTML = '';
     }
 }
-
