@@ -1,32 +1,56 @@
 body {
-    background-color: lightcoral;
+    background-color: white;
     font-family: Arial, sans-serif;
-}
-
-.container {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: url('img/Rogers_Logo.jpg'); 
+    background-size: cover;
+    background-position: center;
+    width: 80%;
     padding: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border-radius: 10px;
 }
 
 .left-frame, .right-frame {
-    padding: 20px;
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 #staff-display {
     width: 100%;
     font-size: 12px;
-    text-align: center;
     height: 200px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(5px);
 }
 
 #name-entry {
     width: 100%;
     font-size: 12px;
-    margin-top: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
     text-align: center;
+    background: rgba(255, 255, 255, 0.5); /* semi-transparent white background */
+    backdrop-filter: blur(5px); /* blur effect */
 }
 
 .buttons {
@@ -34,6 +58,7 @@ body {
     flex-wrap: wrap;
     justify-content: space-between;
     margin-top: 10px;
+    width: 100%;
 }
 
 button {
@@ -41,16 +66,44 @@ button {
     height: 40px;
     font-size: 12px;
     margin-bottom: 10px;
+    background-color: #ff939395;
+    color: #333;
+    border: 0;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: #e622228c;
+    box-shadow: 0 0 5px "#F03939, 0 0 20px #F03939;
 }
 
 #rotation-display {
     font-size: 24px;
     font-weight: bold;
     margin-bottom: 20px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    text-align: center;
+    backdrop-filter: blur(5px); /* blur effect */
 }
 
 #next-button {
     width: 100%;
     height: 40px;
     font-size: 12px;
+    background: #7ef2ae;
+    backdrop-filter: blur(5px);
+}
+
+#next-button:hover {
+    background: #2ecc71;
+    box-shadow: 0 0 5px #59eb95, 0 0 20px #74ffae;
 }
