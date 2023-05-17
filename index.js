@@ -10,6 +10,12 @@ const downButton = document.getElementById('down-button');
 const rotationDisplay = document.getElementById('rotation-display');
 const nextButton = document.getElementById('next-button');
 
+var notesModal = document.getElementById('notes-modal');
+var historyModal = document.getElementById('history-modal');
+var notesText = document.getElementById('notes-text');
+var historyContent = document.getElementById('history-content');
+var notes = [];
+
 let staffList = [];
 let currentIndex = 0;
 
@@ -108,3 +114,26 @@ function updateRotationDisplay(){
         rotationDisplay.innerHTML = '';
     }
 }
+
+document.getElementById('notes').onclick = function() {
+    notesModal.style.display = "block";
+};
+
+document.getElementById('history').onclick = function() {
+    historyModal.style.display = "block";
+    historyContent.innerHTML = notes.join('<br>');
+};
+
+document.getElementsByClassName('close')[0].onclick = function() {
+    notesModal.style.display = "none";
+};
+
+document.getElementsByClassName('close')[1].onclick = function() {
+    historyModal.style.display = "none";
+};
+
+document.getElementById('save-note').onclick = function() {
+    notes.push(noteText.value);
+    noteText.value = '';
+    notesModal.style.display = "none";
+};

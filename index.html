@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Staff Rotation</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link href="style.css" rel="stylesheet"
+    <link href="style.css" rel="stylesheet">
 </head>
 <body>
     <div class="container">
@@ -31,6 +31,24 @@
             </div>
         </div>
     </div>
+
+    <div id="notes-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Notes</h2>
+            <textarea id="note-text" rows="4" cols="50"></textarea>
+            <button id="save-note">Save Note</button>
+        </div>
+    </div>
+
+    <div id="history-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>History</h2>
+            <div id="history-content"></div>
+        </div>
+    </div>
+
 </body>
 <script src="index.js"></script>
 </html>
