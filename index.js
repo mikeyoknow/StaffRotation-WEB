@@ -84,11 +84,21 @@ function moveDown() {
 }
 
 function goToLunch() {
-
+    const selectedName = staffDisplay.selectedIndex;
+    if (selectedName !== -1 && !staffList[selectedName].endsWith('(On Lunch)')){
+        staffList[selectedName] += ' (On Lunch)';
+        staffDisplay.options[selectedName].text = staffList[selectedName];
+        updateRotationDisplay();
+    }
 }
 
 function backFromLunch() {
-
+    const selectedName = staffDisplay.selectedIndex;
+    if(selectedName !== -1 && staffList[selectedName].endsWith('(On Lunch)')) {
+        staffList[selectedName] = staffList[selectedName].replace(' (On Lunch)', '');
+        staffDisplay.options[selectedName].text = staffList[selectedName];
+        updateRotationDisplay();
+    }
 }
 
 function updateRotationDisplay(){

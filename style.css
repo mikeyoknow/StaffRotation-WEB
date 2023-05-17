@@ -23,11 +23,20 @@ body {
     border-radius: 10px;
 }
 
-.left-frame, .right-frame {
+.left-frame, .right-frame{
     width: 45%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+}
+
+.right-frame {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-between;
+    height: 100%;
 }
 
 #staff-display {
@@ -110,4 +119,19 @@ button:hover {
 #next-button:hover {
     background: #2ecc71;
     box-shadow: 0 0 5px #59eb95, 0 0 20px #74ffae;
+}
+
+#notes-history-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+#notes, #history {
+    font-size: 20px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+#notes:hover, #history:hover {
+    color: #2e9a5b;
 }
