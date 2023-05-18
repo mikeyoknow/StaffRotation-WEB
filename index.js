@@ -12,7 +12,7 @@ const nextButton = document.getElementById('next-button');
 
 var notesModal = document.getElementById('notes-modal');
 var historyModal = document.getElementById('history-modal');
-var notesText = document.getElementById('notes-text');
+var notesText = document.getElementById('note-text');
 var historyContent = document.getElementById('history-content');
 var notes = [];
 
@@ -84,8 +84,7 @@ function moveDown() {
     staffDisplay.selectedIndex = selectedName + 1;
     
     updateRotationDisplay();
-  }
-	
+  }	
 
 }
 
@@ -132,8 +131,9 @@ document.getElementsByClassName('close')[1].onclick = function() {
     historyModal.style.display = "none";
 };
 
-document.getElementById('save-note').onclick = function() {
-    notes.push(noteText.value);
-    noteText.value = '';
+document.querySelector('.save-note').onclick = function() {
+    notes.push(notesText.value);
+    notesText.value = '';
     notesModal.style.display = "none";
 };
+
