@@ -8,7 +8,7 @@ const delButton = document.getElementById('del-button');
 const upButton = document.getElementById('up-button');
 const downButton = document.getElementById('down-button');
 const rotationDisplay = document.getElementById('rotation-display');
-const nextButton = document.getElementById('next-button');
+var nextButton = document.getElementById('next-button');
 
 var notesModal = document.getElementById('notes-modal');
 var historyModal = document.getElementById('history-modal');
